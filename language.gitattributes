@@ -1,0 +1,8 @@
+.vscode/* linguist-generated
+build/* linguist-generated
+cmake/* linguist-generated
+
+
+*.txt linguist-language=C++
+*.exe linguist-language=C++
+
