@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/Shenzhijie/Desktop/小功能/build",
+  "command": "C:\\mingw64\\mingw64\\bin\\g++.exe  @CMakeFiles/DeleteBlank.dir/includes_CXX.rsp -g -O0 -finput-charset=UTF-8 -fexec-charset=UTF-8 -std=c++17 -finput-charset=UTF-8 -fexec-charset=UTF-8 -o CMakeFiles\\DeleteBlank.dir\\temp_DeleteBlank.cpp.obj -c C:\\Users\\Shenzhijie\\Desktop\\小功能\\build\\temp_DeleteBlank.cpp",
+  "file": "C:/Users/Shenzhijie/Desktop/小功能/build/temp_DeleteBlank.cpp",
+  "output": "CMakeFiles/DeleteBlank.dir/temp_DeleteBlank.cpp.obj"
+}
+]

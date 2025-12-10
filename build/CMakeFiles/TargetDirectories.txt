@@ -1,0 +1,3 @@
+C:/Users/Shenzhijie/Desktop/小功能/build/CMakeFiles/DeleteBlank.dir
+C:/Users/Shenzhijie/Desktop/小功能/build/CMakeFiles/edit_cache.dir
+C:/Users/Shenzhijie/Desktop/小功能/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,127 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Configure",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-B",
+                "${workspaceFolder}/build",
+                "-G",
+                "MinGW Makefiles",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/mingw-toolchain.cmake"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake Build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build", 
+                "${workspaceFolder}/build",
+                "--target", 
+                "${fileBasenameNoExtension}",
+                "--config", 
+                "Debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "CMake Configure"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake Build Current File",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build",
+                "--target",
+                "${fileBasenameNoExtension}",
+                "--config",
+                "Debug"
+            ],
+            "group": "build",
+            "dependsOn": [
+                "CMake Configure"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake Clean All",
+            "type": "shell",
+            "command": "if",
+            "args": [
+                "exist",
+                "${workspaceFolder}/build",
+                "rmdir",
+                "/s",
+                "/q",
+                "${workspaceFolder}/build"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "windows": {
+                "command": "cmd",
+                "args": [
+                    "/c",
+                    "if",
+                    "exist",
+                    "${workspaceFolder}/build",
+                    "rmdir",
+                    "/s",
+                    "/q",
+                    "${workspaceFolder}/build"
+                ]
+            }
+        },
+        {
+            "label": "CMake Clean",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build",
+                "--target",
+                "clean"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run in External Terminal",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "start",
+                "cmd",
+                "/c",
+                "${workspaceFolder}/build/bin/${fileBasenameNoExtension}.exe && pause && exit"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "new"
+            },
+            "dependsOn": [
+                "CMake Build Current File"
+            ],
+            "problemMatcher": [],
+            "isBackground": false
+        }
+    ]
+}

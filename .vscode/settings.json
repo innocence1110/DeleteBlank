@@ -1,0 +1,12 @@
+{
+    "terminal.integrated.showExitAlert": false,
+    "terminal.integrated.scrollback": 1000,
+    "files.associations": {
+        "*.cpp": "cpp",
+        "*.h": "c"
+    },
+    "debug.terminal.clearBeforeReusing": true,
+    "debug.console.closeOnEnd": true,
+    "debug.allowBreakpointsEverywhere": false,
+    "debug.internalConsoleOptions": "neverOpen"
+}
